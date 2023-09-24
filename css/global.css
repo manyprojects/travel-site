@@ -1,0 +1,92 @@
+/* add hover later */
+/* general styling */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    font-weight: 700;
+    color: #335576;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 25vw;
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0.5vw 4.2vw 0.5vw 0vw;
+}
+
+/* add border bottom later */
+ul > li {
+    display: inline-block;
+    padding-bottom: 1vw;
+    box-sizing: border-box;
+}
+
+ul a {
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 0.9rem;
+    color: black;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.logo > h3 {
+    margin: 0.5vw 0vw 1.5vw 6.5vw;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #FEFAF5;
+    padding: 2.3vw 12vw 1.8vw 14vw;
+}
+
+footer h2 {
+    font-size: 1.4rem;
+}
+
+footer h3 {
+    font-size: 0.6rem;
+    font-weight: lighter;
+    color: #DB7A4E;
+}
+
+footer p {
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
+
+.hours {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 30vw;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    width: 9vw;
+    margin-top: 2.8vw;
+}
+
+.social img {
+    height: 1.7vw;
+}
+
+.icons {
+    height: 10vw;
+}

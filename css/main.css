@@ -1,0 +1,112 @@
+.hero {
+    width: 100vw;
+    height: 37.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 6vw 0vw;
+    background-color: #FEFAF5;
+    color: #335576;
+}
+
+/* container queries preventing text overflow */
+/* parent container */
+.hero__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 41vw;
+    height: 20vw;
+    container-type: inline-size;
+}
+
+.hero__image {
+    height: 27vw;
+}
+
+.recommend {
+    margin-top: 3.5vw;
+    margin-bottom: 2vw;
+    margin-left: 7vw;
+    color: #335576;
+    font-size: 1.4rem;
+}
+
+.cards {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 100vw;
+    height: 32.5vw;
+    justify-content: space-around;
+    padding: 0vw 15.7vw;
+    margin-bottom: 3.6vw;
+}
+
+.cards__hawaii {
+    background-image: url(../assets/images/hawaii.jpg);
+}
+
+.cards__iceland {
+    background-image: url(../assets/images/iceland.jpg);
+}
+
+.cards__greece {
+    background-image: url(../assets/images/greece.jpg);
+}
+
+.cards__hawaii, .cards__iceland, .cards__greece {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    width: 19.6vw;
+    height: 29.7vw;
+    font-size: 1.2rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cards h3 {
+    margin: 0vw 1.5vw 1.4vw;
+    color: #FFFFFF;
+}
+
+.cards > a {
+    text-decoration: none;
+}
+
+/* grid to center */
+.hero__button {
+    display: grid;
+    place-items: center;
+    width: 13vw;
+    height: 2.8vw;
+    padding: 0.7vw 0vw;
+    background-color: #DB7A4E;
+    border-radius: 30px;
+    margin-top: 1vw;
+}
+
+/* container query inline of parent */
+/* maximum inline size */
+@container (max-width: 41vw) {
+    .hero__text > h1 {
+        font-size: clamp(1rem, 10cqi, 7cqi);
+        margin-top: -0.1vw;
+    }
+
+    .hero__text > p {
+        font-size: clamp(0.7rem, 4cqi, 2.7cqi);
+        font-weight: lighter;
+        margin: -0.1vw 0vw 1.6vw;
+    }
+
+    .hero__button > a {
+        font-size: clamp(0.5rem, 3.3cqi, 2.8cqi);
+        text-decoration: none;
+        font-weight: lighter;
+        color: #FFFFFF;
+    }
+}
