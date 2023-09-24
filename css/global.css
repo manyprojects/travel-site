@@ -10,7 +10,10 @@
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 3.8vw;
     background-color: #FFFFFF;
+    container-type: inline-size;
 }
 
 ul {
@@ -19,7 +22,8 @@ ul {
     width: 25vw;
     box-sizing: border-box;
     list-style-type: none;
-    margin: 0.5vw 4.2vw 0.5vw 0vw;
+    margin-right: 0vw 4.2vw 0vw 0vw;
+    container-type: inline-size;
 }
 
 /* add border bottom later */
@@ -32,7 +36,6 @@ ul > li {
 ul a {
     text-decoration: none;
     font-weight: lighter;
-    font-size: 0.9rem;
     color: black;
 }
 
@@ -41,8 +44,7 @@ ul a {
 }
 
 .logo > h3 {
-    margin: 0.5vw 0vw 1.5vw 6.5vw;
-    font-size: 1.1rem;
+    margin: 0vw 0vw 0.5vw 6.5vw;
     font-weight: bold;
 }
 
@@ -52,10 +54,7 @@ footer {
     align-items: flex-start;
     background-color: #FEFAF5;
     padding: 2.3vw 12vw 1.8vw 14vw;
-}
-
-footer h2 {
-    font-size: 1.4rem;
+    container-type: inline-size;
 }
 
 footer h3 {
@@ -89,4 +88,26 @@ footer p {
 
 .icons {
     height: 10vw;
+}
+
+@container (max-width: 100vw) {
+    ul a {
+        font-size: clamp(0.22rem, 5cqi, 9cqi);
+    }
+
+    nav h3 {
+        font-size: clamp(0.27rem , 1.5cqi, 3cqi);
+    }
+    
+    footer h2 {
+        font-size: clamp(0.3rem, 2.4cqi, 5cqi);
+    }
+
+    footer h3 {
+        font-size: clamp(0.2rem, 1cqi, 2cqi);
+    }
+
+    footer p {
+        font-size: clamp(0.22rem, 1.6cqi, 3cqi);
+    }
 }
