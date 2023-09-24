@@ -26,17 +26,40 @@ ul {
     container-type: inline-size;
 }
 
-/* add border bottom later */
 ul > li {
     display: inline-block;
     padding-bottom: 1vw;
     box-sizing: border-box;
 }
 
-ul a {
+.logo__anchor {
     text-decoration: none;
     font-weight: lighter;
+    padding-bottom: 1vw;
     color: black;
+    position: relative;
+}
+
+.logo__anchor:focus, .logo__anchor:hover {
+    color: black;
+}
+
+/* psuedo class hover effect opacity 0 */
+.logo__anchor::after {
+    content: "";
+    height: 2.5px;
+    width: 100%;
+    background-color: #DB7A4E;
+    position: absolute;
+    left: 0px;
+    bottom: 2px;
+    transition: all 0.5s;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.logo__anchor:focus::after, .logo__anchor:hover::after{
+    opacity: 1;
 }
 
 .logo {
